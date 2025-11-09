@@ -1,4 +1,3 @@
 *.nsys-rep
 *.sqlite
-test
-main
+build/

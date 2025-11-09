@@ -11,7 +11,10 @@ NVCCFLAGS = -O2 -arch=native
 LDFLAGS =
 
 # 目标可执行文件名
-TARGET = main
+BINDIR = build
+
+# 目标可执行文件名
+TARGET = $(BINDIR)/main
 
 # 源文件
 SRCS = main.cu
@@ -20,8 +23,11 @@ SRCS = main.cu
 all: $(TARGET)
 
 # 编译和链接规则
-$(TARGET): $(SRCS)
+$(TARGET): $(SRCS) | $(BINDIR)
 	$(NVCC) $(NVCCFLAGS) -o $@ $^ $(LDFLAGS)
+
+$(BINDIR):
+	mkdir -p $@
 
 # 清理规则，用于删除生成的文件
 clean:
