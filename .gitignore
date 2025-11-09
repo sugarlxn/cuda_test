@@ -1,0 +1,4 @@
+*.nsys-rep
+*.sqlite
+test
+main
