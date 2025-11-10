@@ -52,7 +52,7 @@ __global__ void reduce0(float* d_in, float* d_out, int N) {
         d_out[blockIdx.x] = sdata[0];
     }
 }
-
+                                                                                                                                                                                                                                                                                                                                                                                                           
 bool check(float* out, float* res, int N) {
     for (int i = 0; i < N; i++) {
         if (fabs(out[i] - res[i]) > 1e-5) {
