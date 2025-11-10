@@ -33,7 +33,7 @@ $(BINDIR):
 
 # 清理规则，用于删除生成的文件
 clean:
-	rm -f $(TARGET)
+	rm -rf $(BINDIR)
 
 # 将 all 和 clean 声明为伪目标
 .PHONY: all clean

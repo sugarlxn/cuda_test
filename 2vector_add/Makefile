@@ -11,21 +11,26 @@ NVCCFLAGS = -O2 -arch=native
 LDFLAGS =
 
 # 目标可执行文件名
+# 放置可执行文件的目录
 BINDIR = build
 
-# 目标可执行文件名
+# 目标可执行文件路径
 TARGET = $(BINDIR)/main
 
 # 源文件
 SRCS = main.cu
 
+# 头文件
+INCLUDES = -I../include
+
 # 默认目标
 all: $(TARGET)
 
-# 编译和链接规则
+# 编译和链接规则（在链接前确保 build 目录存在）
 $(TARGET): $(SRCS) | $(BINDIR)
-	$(NVCC) $(NVCCFLAGS) -o $@ $^ $(LDFLAGS)
+	$(NVCC) $(NVCCFLAGS) -o $@ $^ $(LDFLAGS) $(INCLUDES)
 
+# 创建输出目录
 $(BINDIR):
 	mkdir -p $@
 
