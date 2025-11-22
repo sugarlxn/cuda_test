@@ -1,0 +1,8 @@
+INFO: [main.cu:15] Number of GPUs: 8
+INFO: [main.cu:21] Using GPU 1: NVIDIA GeForce RTX 4090
+INFO: [main.cu:22] Compute capability: 8.9
+INFO: [main.cu:42] NUM_ELEMENTS: 10
+INFO: [main.cu:50] Input tensor:
+-5.000000 -4.000000 -3.000000 -2.000000 -1.000000 0.000000 1.000000 2.000000 3.000000 4.000000 
+INFO: [main.cu:77] Output tensor after sigmoid activation:
+0.006693 0.017986 0.047426 0.119203 0.268941 0.500000 0.731059 0.880797 0.952574 0.982014 
