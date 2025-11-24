@@ -70,6 +70,7 @@ def run_benchmark(
 Ss = [1024, 2048, 4096]
 Ks = [1024, 2048, 4096]
 SKs = [(S, K) for S in Ss for K in Ks]
+print("SKs:",SKs)
 
 for S, K in SKs:
     print("-" * 85)
